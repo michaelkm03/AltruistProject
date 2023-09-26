@@ -10,7 +10,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp(){
-        String url = "https://www.google.com/finance/";
+        // we could pass url as parameter if we wanted to test new page (e.g, google.com/flights"
+        String url = "https://www.google.com/finance";
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
