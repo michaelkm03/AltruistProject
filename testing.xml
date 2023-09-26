@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Altruist Site">
+    <parameter name="URL" value="https://altruist.com/"/>
+    <test name="Finance Page Test Case">
+        <parameter name="browser" value="Chrome"/>
+        <classes >
+            <!--STOCK SYMBOL TEST CASE-->
+            <class name="FinancePageTest">
+                <methods>
+                    <include name="testAssertFinancePageLoads"/>
+                    <include name="testAssertFinancePageTitleIsCorrect"/>
+                    <include name="testCompareFinancePageStockSymbols"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
