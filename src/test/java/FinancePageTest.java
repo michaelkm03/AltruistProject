@@ -22,9 +22,6 @@ public class FinancePageTest extends BaseTest implements FinanceConstants {
     @Test
     public void testCompareFinancePageStockSymbols(){
         var stockSymbolsOnGoogle = financePage.getInterestedFinancePageStockSymbols();
-        System.out.println("LISTS");
-        System.out.println("our list ------ " + EXPECTEDSTOCKSYMBOLS);
-        System.out.println("google list --- " + stockSymbolsOnGoogle);
         List<String> foundOnlyOnGoogle = new ArrayList<>();
         List<String> foundOnlyInExpectedStockSymbols = new ArrayList<>();
         for (String symbol : stockSymbolsOnGoogle) {
