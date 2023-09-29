@@ -1,3 +1,4 @@
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.FinanceConstants;
@@ -18,6 +19,25 @@ public class FinancePageTest extends BaseTest implements FinanceConstants {
         var pageTitle = financePage.getPageTitle();
         Assert.assertEquals(pageTitle, PAGETITLE);
     }
+
+    @Test
+    public void testClickMore(){
+        financePage.clickMore();
+        Assert.assertNotNull(financePage.getPageTitle());
+    }
+
+    @Test
+    public void testGetTableList(){
+        var tableList = financePage.getTableList();
+        for (WebElement stuff : tableList) {
+            System.out.println(stuff.getText());
+        }
+    }
+
+    // @Test
+    // public void testSearchTerms(){
+    //     financePage.enterSearchTerms("testing search 123");
+    // }
 
     @Test
     public void testCompareFinancePageStockSymbols(){
